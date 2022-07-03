@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+  <div class="grid grid-cols-3 grid-rows-2 min-w-screen min-h-screen">
+    <div id="chart" class="bg-blue-800 row-span-2 col-span-2"></div>
+    
+    <div id="panel" class="p-4">
+      <div class="flex items-center justify-between">
+        <span class="text-base font-medium">Your balance: <span>100 TON</span></span>
+        <button class="px-3 py-2 border rounded-md" id="withdraw-and-signout-button">Withdraw & Signout</button>
+      </div>
+      
+      <div class="h-5/6 flex gap-8 flex-col items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-3xl font-bold">1.7 TON</h1>
+          <p class="text-sm">POSSIBLE PROFIT</p>
+        </div>
+        <div class="flex gap-5">
+          <div class="hover:scale-110 px-8 py-8 text-white bg-green-500 rounded-xl">
+            LONG
+          </div>
+          <div class="hover:scale-110 px-8 py-8 text-white bg-red-500 rounded-xl">
+            SHORT
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div id="positions" class="p-4 flex gap-4 flex-col">
+      <span class="text-xl font-medium">Active positions</span>
+      <div class="border rounded-md px-4 py-3 flex justify-between">
+        <div class="flex flex-col gap-1">
+          <span class="font-medium">BINO/USDJ</span>
+          <span>15:01:00</span>
+        </div>
+        <div class="flex flex-col text-right gap-1">
+          <span class="font-medium">1 TON</span>
+          <span>00:00:25</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import "./channel.js";
+  </script>
+  
+  <script type="module" src="./chart.js"></script>
+</body>
+</html>
